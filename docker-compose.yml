@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: devdungeon_web
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://devdungeon:password@db:5432/devdungeon_db
+
+  db:
+    image: postgres:16
+    container_name: devdungeon_db
+    environment:
+      POSTGRES_DB: devdungeon_db
+      POSTGRES_USER: devdungeon
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
