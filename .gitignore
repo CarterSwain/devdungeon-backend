@@ -1,0 +1,47 @@
+# ----------------------------
+# Python
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+*.pyc
+.env
+
+
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# pytest cache
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# SQLite or local test DBs
+*.db
+*.sqlite
+
+# ----------------------------
+# OS / Editor junk
+# ----------------------------
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Container / Docker
+# ----------------------------
+*.pid
+*.log
+.env.local
